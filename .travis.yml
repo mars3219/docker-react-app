@@ -7,10 +7,10 @@ services:
 
 before_install:
   - echo "start creating an image with dockerfile"
-  - docker build -t johnahn/docker-react-app -f Dockerfile.dev .
+  - docker build -t mars3219/docker-react-app -f Dockerfile.dev .
 
 script: 
-  - docker run -e CI=true johnahn/docker-react-app npm run test -- --coverage
+  - docker run -e CI=true mars3219/docker-react-app npm run test -- --coverage
 
 deploy:
   edge: true
@@ -23,4 +23,4 @@ deploy:
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY"
