@@ -13,7 +13,7 @@ script:
   - docker run -e CI=true mars3219/docker-react-app npm run test -- --coverage
 
 after_success:
-  - echo "Test success"
+  - echo "Test success.."
 
 # deploy:
 #   edge: true
